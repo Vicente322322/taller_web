@@ -1,0 +1,90 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #2c2c2c;
+    color: #333;
+    font-size: 18px;
+}
+
+.navbar {
+    background-color: #2c2c2c;
+}
+
+.navbar a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-item a:hover {
+    background-color: #ad3636;
+    color: white;
+}
+
+.navbar-toggler {
+    color: white;
+}
+
+.servicios-titulo {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.servicios-titulo h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: #252525; 
+    color: white; 
+    border-radius: 20px; 
+    margin-bottom: 30px; 
+    border: none; 
+    transition: transform 0.3s ease; 
+}
+
+.card h5 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.hero {
+    background-color: #2c2c2c;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.carousel-item img {
+    max-height: 800px;
+    width: auto;
+}
+
+.btn-rojo {
+    background-color: #A34343; 
+    color: white;
+    border: none;
+    padding: 4px 9px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn-rojo:hover {
+    background-color: #ad3636; 
+    transform: scale(1.05); 
+}
+
+.btn-rojo:active {
+    background-color: #990000;
+}
+

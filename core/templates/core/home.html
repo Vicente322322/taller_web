@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'core/css/style_2.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="{% static 'core/img/logotaller.png' %}" alt="logo" width="120px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'producto' 'ins' -1%}">Panel</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'tienda_producto' %}">Tienda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'registrarse' %}">Regístrate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'ingresar' %}">Ingresar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'core/img/tablero-mantencion-x-km.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Mantención por kilometraje</h4>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'core/img/taller-mecanico-operatividad-1.jpg' %}" class="d-block w-100 " alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Revisión técnica</h4>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'core/img/cambio-de-ruedas.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Cambio de neumáticos</h4>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+  </div>
+
+  <br>
+  <div class="servicios-titulo">
+    <h1>Servicios destacados</h1>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="{% static 'core/img/diagnostico_fallas.webp' %}" class="card-img-top" alt="Diagnóstico de fallas">
+                  <div class="card-body">
+                      <h5 class="card-title">Diagnóstico de fallas</h5>
+                      <button class="btn-rojo hide" id="hide1">Mostrar menos</button>
+                      <button class="btn-rojo" id="show1">Mostrar más</button>
+                      <p id="p1" class="collapse">Este servicio consiste en una exhaustiva evaluación del vehículo para identificar cualquier problema mecánico, eléctrico o electrónico. Los técnicos utilizan herramientas de diagnóstico avanzadas y su experiencia para localizar y diagnosticar las fallas, proporcionando al cliente un informe detallado de los problemas detectados y las posibles soluciones.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="{% static 'core/img/frenos.webp' %}" class="card-img-top" alt="Cambio de frenos">
+                  <div class="card-body">
+                      <h5 class="card-title">Cambio de frenos</h5>
+                      <button class="btn-rojo hide" id="hide2">Mostrar menos</button>
+                      <button class="btn-rojo" id="show2">Mostrar más</button>
+                      <p id="p2" class="collapse">Durante este servicio, se inspeccionan y reemplazan las pastillas de freno desgastadas, así como los discos de freno si es necesario. Se ajustan o reemplazan los componentes del sistema de frenos, garantizando un frenado seguro y eficiente del vehículo.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="{% static 'core/img/parabrisas.webp' %}" class="card-img-top" alt="Reparación de Parabrisas">
+                  <div class="card-body">
+                      <h5 class="card-title">Reparación de Parabrisas</h5>
+                      <button class="btn-rojo hide" id="hide3">Mostrar menos</button>
+                      <button class="btn-rojo" id="show3">Mostrar más</button>
+                      <p id="p3" class="collapse">La reparación de parabrisas es un servicio que corrige pequeños daños como astillas o grietas. Se utiliza una resina especial para rellenar el área afectada, restaurando la integridad y evitando que el daño se propague. Es una solución rápida y rentable para mantener la seguridad y la visibilidad del conductor.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="{% static 'core/img/aceite.webp' %}" class="card-img-top" alt="Cambio aceite motor y filtro">
+                  <div class="card-body">
+                      <h5 class="card-title">Cambio aceite motor y filtro</h5>
+                      <button class="btn-rojo hide" id="hide4">Mostrar menos</button>
+                      <button class="btn-rojo" id="show4">Mostrar más</button>
+                      <p id="p4" class="collapse">En este servicio, se drena el aceite viejo del motor y se reemplaza con aceite nuevo de alta calidad, junto con un cambio del filtro de aceite. Esto ayuda a mantener el motor en óptimas condiciones de funcionamiento, proporcionando una lubricación adecuada y prolongando la vida útil del motor.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="{% static 'core/img/revision.webp' %}" class="card-img-top" alt="Revisión técnica">
+                  <div class="card-body">
+                      <h5 class="card-title">Revisión técnica</h5>
+                      <button class="btn-rojo hide" id="hide5">Mostrar menos</button>
+                      <button class="btn-rojo" id="show5">Mostrar más</button>
+                      <p id="p5" class="collapse">La revisión técnica es un proceso obligatorio en muchos países que garantiza que el vehículo cumpla con los estándares de seguridad y emisiones establecidos por las autoridades. Durante este servicio, se realiza una inspección exhaustiva del vehículo para verificar su estado general y su conformidad con los requisitos legales.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="{% static 'core/img/cambio_neumatico.webp' %}" class="card-img-top" alt="Cambio de neumáticos">
+                  <div class="card-body">
+                      <h5 class="card-title">Cambio de neumáticos</h5>
+                      <button class="btn-rojo hide" id="hide6">Mostrar menos</button>
+                      <button class="btn-rojo" id="show6">Mostrar más</button>
+                      <p id="p6" class="collapse">Durante este servicio, se retiran los neumáticos desgastados y se instalan neumáticos nuevos de acuerdo con las especificaciones del fabricante y las necesidades del cliente. Esto mejora la tracción, la estabilidad y el rendimiento general del vehículo, garantizando una conducción segura en diversas condiciones de la carretera.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="{% static 'core/js/showhide.js' %}"></script>
+</body>
+
+<footer class="footer mt-auto py-3 bg-dark">
+  <div class="container text-center">
+    <span class="text-light">© 2024 Taller Mecánico Rayo Makween. Todos los derechos reservados.</span>
+  </div>
+</footer>
+</html>
